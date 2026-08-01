@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Girlfriend's Day ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{
+background:linear-gradient(#ffe6ef,#fff);
+overflow-x:hidden;
+color:#333;
+}
+
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px;
+text-align:center;
+}
+
+h1{
+font-size:2.3rem;
+color:#ff4f81;
+margin-bottom:20px;
+}
+
+h2{
+color:#ff4f81;
+margin-bottom:15px;
+}
+
+p{
+max-width:700px;
+line-height:1.8;
+font-size:18px;
+}
+
+img{
+width:90%;
+max-width:350px;
+border-radius:20px;
+margin:20px 0;
+box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:15px;
+width:100%;
+margin-top:20px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+margin:0;
+}
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:40px;
+background:#ff4f81;
+color:white;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
+}
+
+#secret{
+display:none;
+font-size:35px;
+margin-top:30px;
+color:#ff4f81;
+font-weight:bold;
+}
+
+.petal{
+position:fixed;
+top:-30px;
+font-size:22px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-50px) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<audio controls autoplay loop style="position:fixed;bottom:10px;right:10px;z-index:999">
+<source src="until-i-found-you.mp3" type="audio/mpeg">
+</audio>
+
+<section>
+
+<h1>Happy Girlfriend's Day 🌸</h1>
+
+<p>
+
+Some stories begin with a hello.
+
+Ours began with...
+
+<b>"Chal."</b>
+
+</p>
+
+<img src="1.jpg">
+
+<button onclick="window.scrollTo({top:window.innerHeight,behavior:'smooth'})">
+Begin Our Story ❤️
+</button>
+
+</section>
+
+<section>
+
+<h2>1 August</h2>
+
+<img src="2.jpg">
+
+<p>
+
+The first day.
+
+Two strangers.
+
+Neither of us knew we'd become each other's favorite place.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>December</h2>
+
+<img src="3.jpg">
+
+<p>
+
+We never picked an exact day.
+
+We just knew...
+
+Somewhere in December,
+
+you became home.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>4 February ❤️</h2>
+
+<img src="4.jpg">
+
+<p>
+
+The first "I love you."
+
+The one we actually meant.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>16 December 🎂</h2>
+
+<img src="5.jpg">
+
+<p>
+
+Celebrating your birthday in my PG
+
+is still my favorite memory.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Our Memories 📸</h2>
+
+<div class="gallery">
+
+<img src="1.jpg">
+<img src="2.jpg">
+<img src="3.jpg">
+<img src="4.jpg">
+<img src="5.jpg">
+<img src="6.jpg">
+<img src="7.jpg">
+<img src="8.jpg">
+<img src="9.jpg">
+<img src="10.jpg">
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Time Since We Met</h2>
+
+<h1 id="timer"></h1>
+
+</section>
+
+<section>
+
+<h2>🌻</h2>
+
+<button onclick="document.getElementById('secret').style.display='block'">
+
+Tap the Sunflower
+
+</button>
+
+<div id="secret">
+
+I love maach.
+
+</div>
+
+</section>
+
+<section>
+
+<img src="10.jpg">
+
+<h1>
+
+Happy Girlfriend's Day,
+
+Bhutu ❤️
+
+</h1>
+
+<p>
+
+Thank you
+
+for every laugh,
+
+every memory,
+
+every smile,
+
+and for making an ordinary year
+
+feel unforgettable.
+
+Forever,
+
+❤️
+
+</p>
+
+</section>
+
+<script>
+
+const meet=new Date("August 1, 2025");
+
+function update(){
+
+let now=new Date();
+
+let diff=now-meet;
+
+let days=Math.floor(diff/86400000);
+
+let hrs=Math.floor(diff%86400000/3600000);
+
+let mins=Math.floor(diff%3600000/60000);
+
+document.getElementById("timer").innerHTML=
+
+days+" Days<br>"+hrs+" Hours<br>"+mins+" Minutes";
+
+}
+
+setInterval(update,1000);
+
+update();
+
+function petal(){
+
+let p=document.createElement("div");
+
+p.className="petal";
+
+p.innerHTML="🌸";
+
+p.style.left=Math.random()*100+"vw";
+
+p.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(p);
+
+setTimeout(()=>p.remove(),10000);
+
+}
+
+setInterval(petal,300);
+
+</script>
+
+</body>
+</html>
